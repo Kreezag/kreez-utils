@@ -1,10 +1,13 @@
 'use strict';
 
 var grunto = require('grunto');
+var jitGrunt = require('jit-grunt');
 
 module.exports = grunto(function (grunt) {
+  jitGrunt(grunt);
+
 	grunt.registerTask('test',   [
-		'newer:eslint'/*<% if (testEngine === 'nodeunit') { %>*/,
+		'eslint'/*<% if (testEngine === 'nodeunit') { %>*/,
 		'nodeunit'/*<% } %>*/
 	]);
 
@@ -25,6 +28,8 @@ module.exports = grunto(function (grunt) {
 		eslint: {
 			all: [
 				'**/*.js',
+				'!test/**/*.js',
+				'!Gruntfile.js',
 				'!node_modules/**/*',
 				'!lib-cov/**/*'
 			]
@@ -33,6 +38,7 @@ module.exports = grunto(function (grunt) {
 		watch: {
 			files: [
 				'lib/**/*',
+				'test/**/*.js',
 				'!node_modules/**/*',
 				'!lib-cov/**/*'
 			],
