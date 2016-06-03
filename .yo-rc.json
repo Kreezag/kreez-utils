@@ -1,0 +1,23 @@
+{
+  "generator-node-lib": {
+    "version": "1.0.0",
+    "travis": false,
+    "testEngine": "nodeunit",
+    "license": "MIT",
+    "indentType": "space",
+    "indentSize": "2",
+    "coveralls": null,
+    "app": {
+      "name": "kreez-utils",
+      "varName": "kreezUtils",
+      "coverageEnvName": "NODE_LIB_KREEZUTILS_COVERAGE"
+    },
+    "repository": {
+      "raw": "https://github.com/Kriz-AG/kreez-utils.git",
+      "url": "https://github.com/Kriz-AG/kreez-utils",
+      "host": "github.com",
+      "user": "Kriz-AG",
+      "name": "kreez-utils"
+    }
+  }
+}
